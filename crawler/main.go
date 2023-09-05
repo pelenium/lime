@@ -1,4 +1,4 @@
-package main
+package crawler
 
 import (
 	"database/sql"
@@ -27,7 +27,7 @@ func main() {
 	}
 	defer db.Close()
 
-	links = append(links, "https://vc.ru/dev/225726-sayty-na-kotoryh-mozhno-ottochit-navyki-resheniya-zadach-po-programmirovaniyu")
+	links = append(links, "http://www.hitkiller.com/")
 
 	for len(links) != 0 {
 		fmt.Println(links[0])
