@@ -1,14 +1,14 @@
 function send() {
-    var query = String(document.getElementById('query').value);
+    let query = String(document.getElementById('query').value);
 
     if (query !== "") {
         console.log(query);
 
-        var jsn = {
+        let jsn = {
             query: query,
         };
 
-        fetch("/api/:req", {
+        fetch("/", {
             method: "POST",
             body: JSON.stringify(jsn),
             headers: {

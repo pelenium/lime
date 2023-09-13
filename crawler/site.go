@@ -1,4 +1,4 @@
-package crawler
+package main
 
 import "github.com/securisec/go-keywords"
 
@@ -9,7 +9,7 @@ type site struct {
 	keywords []string
 }
 
-func (s *site) SetKW(data string) {
+func (s *site) setKW(data string) {
 	kw, _ := keywords.Extract(data, keywords.ExtractOptions{
 		StripTags:        true,
 		RemoveDuplicates: true,
