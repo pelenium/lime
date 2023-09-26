@@ -19,7 +19,7 @@ func findByUrl(w string) []site {
 	}
 	defer rows.Close()
 
-	sites := []site{}
+	var sites []site
 
 	for rows.Next() {
 		s := site{}
