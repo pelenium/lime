@@ -5,5 +5,5 @@ type site struct {
 	title    string
 	htmlCode string
 	keywords []string
-	rating   int
+	rating   float32
 }

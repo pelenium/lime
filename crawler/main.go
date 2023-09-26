@@ -6,9 +6,10 @@ import (
 )
 
 var (
-	links  = make([]string, 0)
-	used   = make([]string, 0)
-	insert = "INSERT INTO sites (url, title, keywords, html) values ($1, $2, $3, $4)"
+	links         = make([]string, 0)
+	used          = make([]string, 0)
+	insert        = "INSERT INTO sites (url, title, keywords, html, counter) values ($1, $2, $3, $4, $5)"
+	updateCounter = "UPDATE sites SET counter = counter + 0.1 WHERE url = $1"
 )
 
 func main() {
@@ -19,14 +20,14 @@ func main() {
 	}
 	defer db.Close()
 
-	links = append(links, "https://pikabu.ru/")
+	links = append(links, "https://habr.com/")
+	links = append(links, "https://tproger.ru/")
+	links = append(links, "https://dtf.ru/")
+	links = append(links, "https://thecode.media/")
 
 	for len(links) != 0 {
 		fmt.Println(links[0])
 		goToPage(db, links[0])
-		fmt.Println("it's ok")
-		fmt.Println()
-
 		links = links[1:]
 	}
 }

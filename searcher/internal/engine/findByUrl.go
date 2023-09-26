@@ -27,6 +27,7 @@ func findByUrl(w string) []site {
 			fmt.Println(err)
 			continue
 		}
+		s.rating += 0.15
 		sites = append(sites, s)
 	}
 	return sites
