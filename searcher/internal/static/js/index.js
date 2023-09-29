@@ -1,5 +1,5 @@
 function send() {
-    let query = String(document.getElementById('query').value);
+    let query = String(document.getElementById('query').value).trim();
 
     if (query !== "") {
         console.log(query);

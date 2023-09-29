@@ -20,10 +20,11 @@ func main() {
 	}
 	defer db.Close()
 
-	links = append(links, "https://habr.com/")
-	links = append(links, "https://tproger.ru/")
-	links = append(links, "https://dtf.ru/")
-	links = append(links, "https://thecode.media/")
+	links = append(links, "https://go.dev/")
+	links = append(links, "https://habr.com/ru/articles/731046/")
+	links = append(links, "https://blog.skillfactory.ru/glossary/golang/")
+	links = append(links, "https://metanit.com/go/tutorial/")
+	links = append(links, "https://habr.com/ru/hubs/programming/articles/")
 
 	for len(links) != 0 {
 		fmt.Println(links[0])
