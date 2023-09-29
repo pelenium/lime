@@ -2,15 +2,15 @@ package engine
 
 import "sort"
 
-func GetLinks(query []string) []site {
-	var result []site
+func GetLinks(query []string) []Site {
+	var result []Site
 
 	for _, i := range query {
 		for _, link := range findByUrl(i) {
 			if !contains(result, link) {
 				result = append(result, link)
 				sort.Slice(result, func(i, j int) bool {
-					return result[i].url > result[j].url
+					return result[i].Url > result[j].Url
 				})
 			}
 		}
@@ -19,7 +19,7 @@ func GetLinks(query []string) []site {
 			if !contains(result, link) {
 				result = append(result, link)
 				sort.Slice(result, func(i, j int) bool {
-					return result[i].url > result[j].url
+					return result[i].Url > result[j].Url
 				})
 			}
 		}
@@ -28,7 +28,7 @@ func GetLinks(query []string) []site {
 			if !contains(result, link) {
 				result = append(result, link)
 				sort.Slice(result, func(i, j int) bool {
-					return result[i].url > result[j].url
+					return result[i].Url > result[j].Url
 				})
 			}
 		}
@@ -37,15 +37,15 @@ func GetLinks(query []string) []site {
 	return result
 }
 
-func contains(arr []site, el site) bool {
+func contains(arr []Site, el Site) bool {
 	left, right := -1, len(arr)
 
 	for left < right-1 {
 		middle := (left + right) / 2
 
-		if arr[middle].url == el.url {
+		if arr[middle].Url == el.Url {
 			return true
-		} else if arr[middle].url < el.url {
+		} else if arr[middle].Url < el.Url {
 			left = middle
 		} else {
 			right = middle

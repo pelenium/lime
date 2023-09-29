@@ -10,6 +10,7 @@ import (
 
 	"github.com/antchfx/htmlquery"
 	"github.com/lib/pq"
+	_ "github.com/lib/pq"
 	"golang.org/x/net/html"
 )
 

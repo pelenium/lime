@@ -3,9 +3,12 @@ package engine
 import (
 	"database/sql"
 	"fmt"
+
+	"github.com/lib/pq"
+	_ "github.com/lib/pq"
 )
 
-func findByUrl(str string) []site {
+func findByUrl(str string) []Site {
 	conn := "user=postgres password=781842 dbname=lime sslmode=disable"
 	db, err := sql.Open("postgres", conn)
 	if err != nil {
@@ -13,18 +16,18 @@ func findByUrl(str string) []site {
 	}
 	defer db.Close()
 
-	var result []site
+	var result []Site
 
-	req := `SELECT FROM sites * WHERE lower(url) LIKE '%$1%'`
+	req := `SELECT FROM sites * WHERE lower(Url) LIKE '%` + str + `%'`
 
-	rows, err := db.Query(req, str)
+	rows, err := db.Query(req)
 	if err != nil {
 		panic(err)
 	}
 
 	for rows.Next() {
-		s := site{}
-		err = rows.Scan(&s.url, &s.title, &s.keywords, &s.htmlCode, &s.rating)
+		s := Site{}
+		err = rows.Scan(&s.Url, &s.Title, pq.Array(&s.Keywords), &s.HtmlCode)
 		if err != nil {
 			fmt.Println(err)
 			continue

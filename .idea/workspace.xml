@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f4032b6e-95f9-4410-98e9-ef055c16665e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/lime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/crawler.go" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/crawler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/engine/findByTitle.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/findByTitle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/engine/findByUrl.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/findByUrl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/engine/findInKeywords.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/findInKeywords.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/engine/getLinks.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/getLinks.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/engine/site.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/site.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/handlers/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/handlers/post.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../Program Files/Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2UTbyXEXzWBGjxSPbWpLTscz1pz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/development/Go/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\development\lime\searcher\cmd" />
+      <recent name="C:\development\lime\searcher" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build searcher/cmd">
+    <configuration name="go build crawler" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="lime" />
+      <working_directory value="$PROJECT_DIR$/crawler" />
+      <kind value="PACKAGE" />
+      <package value="crawler" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/crawler/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build searcher/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="lime" />
+      <working_directory value="$PROJECT_DIR$/searcher" />
+      <kind value="PACKAGE" />
+      <package value="searcher/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/searcher/cmd/main.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build searcher/cmd" />
+        <item itemvalue="Go Build.go build crawler" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

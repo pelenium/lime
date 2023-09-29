@@ -3,9 +3,12 @@ package engine
 import (
 	"database/sql"
 	"fmt"
+
+	"github.com/lib/pq"
+	_ "github.com/lib/pq"
 )
 
-func findInKeywords(str string) []site {
+func findInKeywords(str string) []Site {
 	conn := "user=postgres password=781842 dbname=lime sslmode=disable"
 	db, err := sql.Open("postgres", conn)
 	if err != nil {
@@ -13,18 +16,18 @@ func findInKeywords(str string) []site {
 	}
 	defer db.Close()
 
-	var result []site
+	var result []Site
 
-	req := `SELECT * FROM sites WHERE EXISTS (SELECT 1 FROM unnest(keywords) AS element WHERE lower(element::text) LIKE lower('%$1%'))`
+	req := `SELECT * FROM sites WHERE EXISTS (SELECT 1 FROM unnest(Keywords) AS element WHERE lower(element::text) LIKE lower('%` + str + `%'))`
 
-	rows, err := db.Query(req, str)
+	rows, err := db.Query(req)
 	if err != nil {
 		panic(err)
 	}
 
 	for rows.Next() {
-		s := site{}
-		err = rows.Scan(&s.url, &s.title, &s.keywords, &s.htmlCode, &s.rating)
+		s := Site{}
+		err = rows.Scan(&s.Url, &s.Title, pq.Array(&s.Keywords), &s.HtmlCode)
 		if err != nil {
 			fmt.Println(err)
 			continue

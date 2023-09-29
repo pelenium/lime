@@ -1,9 +1,9 @@
 package engine
 
-type site struct {
-	url      string
-	title    string
-	htmlCode string
-	keywords []string
-	rating   float32
+type Site struct {
+	Url      string
+	Title    string
+	HtmlCode string
+	Keywords []string
+	Rating   float32
 }
