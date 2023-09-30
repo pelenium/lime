@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"encoding/json"
+	"fmt"
 	"io"
-	"searcher/internal/engine"
+	"net/http"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -14,21 +14,7 @@ func IndexPost(c *gin.Context) {
 	body, _ := io.ReadAll(c.Request.Body)
 	data := string(body)
 
-	query := strings.Split(gjson.Get(data, "query").String(), " ")
-	sites := engine.GetLinks(query)
+	query := strings.Join(strings.Split(gjson.Get(data, "query").String(), " "), "_")
 
-	jsn := map[string]interface{}{}
-	for _, site := range sites {
-		jsn[site.Url] = map[string]interface{}{
-			"keywords": site.Keywords,
-			"title":    site.Title,
-		}
-	}
-
-	// json with sites
-	jsnResult, err := json.Marshal(jsn)
-	if err != nil {
-		panic(err)
-	}
-
+	c.Redirect(http.StatusPermanentRedirect, fmt.Sprintf("/%s", query))
 }

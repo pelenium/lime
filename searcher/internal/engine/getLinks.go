@@ -1,6 +1,9 @@
 package engine
 
-import "sort"
+import (
+	"sort"
+	"strings"
+)
 
 func GetLinks(query []string) []Site {
 	var result []Site
@@ -31,6 +34,33 @@ func GetLinks(query []string) []Site {
 					return result[i].Url > result[j].Url
 				})
 			}
+		}
+	}
+
+	for _, link := range findByUrl(strings.Join(query, " ")) {
+		if !contains(result, link) {
+			result = append(result, link)
+			sort.Slice(result, func(i, j int) bool {
+				return result[i].Url > result[j].Url
+			})
+		}
+	}
+
+	for _, link := range findByTitle(strings.Join(query, " ")) {
+		if !contains(result, link) {
+			result = append(result, link)
+			sort.Slice(result, func(i, j int) bool {
+				return result[i].Url > result[j].Url
+			})
+		}
+	}
+
+	for _, link := range findInKeywords(strings.Join(query, " ")) {
+		if !contains(result, link) {
+			result = append(result, link)
+			sort.Slice(result, func(i, j int) bool {
+				return result[i].Url > result[j].Url
+			})
 		}
 	}
 
