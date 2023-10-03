@@ -17,7 +17,6 @@ func findInKeywords(str string) []Site {
 	defer db.Close()
 
 	var result []Site
-
 	req := `SELECT * FROM sites WHERE EXISTS (SELECT 1 FROM unnest(Keywords) AS element WHERE lower(element::text) LIKE lower('%` + str + `%'))`
 
 	rows, err := db.Query(req)

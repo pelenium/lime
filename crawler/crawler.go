@@ -41,10 +41,6 @@ func goToPage(db *sql.DB, url string) {
 		if len(link) >= 4 {
 			if link[:4] == "http" {
 				if !contains(used, strings.Split(strings.Split(link, "\n")[0], " ")[0]) {
-					_, err := db.Exec(updateCounter, strings.Split(strings.Split(link, "\n")[0], " ")[0])
-					if err != nil {
-						fmt.Println(err)
-					}
 					links = append(links, strings.Split(strings.Split(link, "\n")[0], " ")[0])
 				} else {
 					fmt.Println("contains")
@@ -63,7 +59,7 @@ func goToPage(db *sql.DB, url string) {
 	}
 	s.setKW(string(data))
 
-	_, err = db.Exec(insert, s.url, s.title, pq.Array(s.keywords), s.htmlCode, 0)
+	_, err = db.Exec(insert, s.url, s.title, pq.Array(s.keywords), s.htmlCode)
 	if err != nil {
 		fmt.Println(err)
 		return

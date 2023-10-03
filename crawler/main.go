@@ -6,10 +6,9 @@ import (
 )
 
 var (
-	links         = make([]string, 0)
-	used          = make([]string, 0)
-	insert        = "INSERT INTO sites (url, title, keywords, html, counter) values ($1, $2, $3, $4, $5)"
-	updateCounter = "UPDATE sites SET counter = counter + 0.1 WHERE url = $1"
+	links  = make([]string, 0)
+	used   = make([]string, 0)
+	insert = "INSERT INTO sites (url, title, keywords, html) values ($1, $2, $3, $4)"
 )
 
 func main() {
@@ -20,11 +19,7 @@ func main() {
 	}
 	defer db.Close()
 
-	links = append(links, "https://go.dev/")
-	links = append(links, "https://habr.com/ru/articles/731046/")
-	links = append(links, "https://blog.skillfactory.ru/glossary/golang/")
-	links = append(links, "https://metanit.com/go/tutorial/")
-	links = append(links, "https://habr.com/ru/hubs/programming/articles/")
+	links = append(links, "https://infoselection.ru/infokatalog/internet-i-programmy/internet-osnovnoe/item/90-50-samykh-poseshchaemykh-sajtov-runeta")
 
 	for len(links) != 0 {
 		fmt.Println(links[0])

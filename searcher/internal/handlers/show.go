@@ -1,20 +1,15 @@
 package handlers
 
 import (
-	"encoding/json"
-	"io"
+	"net/http"
 	"searcher/internal/engine"
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/tidwall/gjson"
 )
 
 func Show(c *gin.Context) {
-	body, _ := io.ReadAll(c.Request.Body)
-	data := string(body)
-
-	query := strings.Split(gjson.Get(data, "query").String(), "_")
+	query := strings.Split(c.Param("req"), "_")
 	sites := engine.GetLinks(query)
 
 	jsn := map[string]interface{}{}
@@ -25,8 +20,5 @@ func Show(c *gin.Context) {
 		}
 	}
 
-	jsnResult, err := json.Marshal(jsn)
-	if err != nil {
-		panic(err)
-	}
+	c.JSON(http.StatusOK, jsn)
 }

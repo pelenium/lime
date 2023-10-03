@@ -18,7 +18,7 @@ func findByTitle(str string) []Site {
 
 	var result []Site
 
-	req := `SELECT FROM sites * WHERE lower(Title) LIKE '%` + str + `$1%'`
+	req := `SELECT * FROM sites WHERE lower(title) LIKE '%` + str + `%'`
 
 	rows, err := db.Query(req)
 	if err != nil {

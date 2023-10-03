@@ -13,8 +13,7 @@ func main() {
 	r.LoadHTMLGlob("./internal/static/html/*.html")
 
 	r.GET("/", handlers.Index)
-	r.POST("/", handlers.IndexPost)
-	r.GET("/:req", handlers.Show)
+	r.GET("/search/:req", handlers.Show)
 
 	err := r.Run(":8080")
 	if err != nil {

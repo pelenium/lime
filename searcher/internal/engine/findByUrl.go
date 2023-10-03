@@ -18,7 +18,7 @@ func findByUrl(str string) []Site {
 
 	var result []Site
 
-	req := `SELECT FROM sites * WHERE lower(Url) LIKE '%` + str + `%'`
+	req := `SELECT * FROM sites WHERE lower(url) LIKE '%` + str + `%'`
 
 	rows, err := db.Query(req)
 	if err != nil {
