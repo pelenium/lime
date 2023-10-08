@@ -73,3 +73,12 @@ button {
     margin-left: 20px;
     margin-top: 22.5px;
 }
+
+#site-title {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.card a {
+    text-decoration: none;
+}

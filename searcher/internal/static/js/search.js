@@ -23,8 +23,13 @@ function createSiteCards(jsonData) {
         const card = document.createElement("div");
         card.classList.add("card");
 
+        const titleLink = document.createElement("a");
+        titleLink.textContent = item.title;
+        titleLink.href = item.url;
+        titleLink.id = "site-title"
+
         const title = document.createElement("h2");
-        title.textContent = item.title;
+        title.appendChild(titleLink);
 
         const domain = new URL(item.url).hostname;
 
