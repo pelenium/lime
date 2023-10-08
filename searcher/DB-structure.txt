@@ -1,0 +1,12 @@
+PostgreSQL
+
+my data for connection (you can change it in crawler/main.go and searcher/internal/engine/findBy(Title/Url/Keywords).go)
+
+db name  - lime
+table    - sites
+user     - postgres
+password - 781842
+
+ url  | title | keywords   | html |
+------+-------+------------+------|
+ text | text  | text array | text |
