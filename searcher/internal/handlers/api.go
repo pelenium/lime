@@ -13,13 +13,13 @@ func Api(c *gin.Context) {
 	query := strings.Split(req, "_")
 	sites := engine.GetLinks(query)
 
-	var jsn []interface{}
+	var jsn []map[string]interface{}
 	for _, site := range sites {
-		jsn = append(jsn, []interface{}{
-			site.Url,
-			site.Keywords,
-			site.Title,
-			site.Rating,
+		jsn = append(jsn, map[string]interface{}{
+			"url":      site.Url,
+			"keywords": site.Keywords,
+			"title":    site.Title,
+			"rating":   site.Rating,
 		})
 	}
 

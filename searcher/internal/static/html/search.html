@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="/static/js/search.js"></script>
-    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/detect.js"></script>
+    <link rel="stylesheet" href="/static/css/search.css">
     <title>Lime</title>
 </head>
+
 <body>
-<div>
-</div>
+    <div class="search-bar">
+        <img src="/static/img/lime.png" alt="Изображение" class="icon">
+        <input class="query" placeholder="Enter something" id="query" type="text" onkeypress="check(event)">
+        <button onclick="send()">Find</button>
+    </div>
+    <div id="main-panel">
+    </div>
 </body>
+
 </html>

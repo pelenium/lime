@@ -9,9 +9,32 @@ fetch(`/api/${reqValue}`)
         return response.json();
     })
     .then(data => {
-        console.log(data);
+        createSiteCards(data)
     })
     .catch(error => {
         console.error('Произошла ошибка:', error);
     });
 
+
+function createSiteCards(jsonData) {
+    const mainPanel = document.getElementById("main-panel");
+
+    jsonData.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const title = document.createElement("h2");
+        title.textContent = item.title;
+
+        const domain = new URL(item.url).hostname;
+
+        const link = document.createElement("a");
+        link.href = domain;
+        link.textContent = domain;
+
+        card.appendChild(title);
+        card.appendChild(link);
+
+        mainPanel.appendChild(card);
+    });
+}

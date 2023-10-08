@@ -2,15 +2,11 @@ body {
     background-color: #141414;
 }
 
-.header,
 .search-bar {
     color: #f8f8f8;
     display: flex;
-    justify-content: center;
-}
-
-.header {
-    margin-top: 18%;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .title {
@@ -33,10 +29,16 @@ input {
     border-width: 3px;
     border-style: solid;
     font-size: 20px;
-    width: 30%;
+    width: 35%;
     height: 45px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: block;
+    padding-left: 10px;
+    min-width: 150px;
+    display: flex;
 }
 
 button {
@@ -46,7 +48,28 @@ button {
     background-color: #71BC78;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
-    width: 2.5%;
+    width: 100px;
     height: 45px;
+    margin-top: 20px;
     font-size: 20px;
+}
+
+.card {
+    background-color: #232323;
+    color: #f8f8f8;
+    margin-top: 20px;
+    margin-left: 70px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 30%;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 22.5px;
 }
