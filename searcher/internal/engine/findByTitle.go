@@ -32,6 +32,7 @@ func findByTitle(str string) []Site {
 			fmt.Println(err)
 			continue
 		}
+		s.Rating = 2
 		result = append(result, s)
 	}
 

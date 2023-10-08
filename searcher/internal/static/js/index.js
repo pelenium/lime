@@ -3,6 +3,6 @@ function send() {
 
     if (query !== "") {
         console.log(`/search/${query.split(" ").join("_")}`)
-        location.replace(`/search/${query.split(" ").join("_")}`)
+        location.replace(`/search/?req=${query.split(" ").join("_")}`)
     }
 }

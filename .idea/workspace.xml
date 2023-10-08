@@ -6,16 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f4032b6e-95f9-4410-98e9-ef055c16665e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/crawler.go" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/crawler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/cmd/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/internal/engine/findByTitle.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/findByTitle.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/internal/engine/findByUrl.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/findByUrl.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/internal/engine/findInKeywords.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/findInKeywords.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/internal/engine/getLinks.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/engine/getLinks.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searcher/internal/handlers/post.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/internal/handlers/show.go" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/handlers/show.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/static/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/static/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/static/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/static/html/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/internal/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/internal/static/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/internal/static/js/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="JavaScript File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -48,31 +48,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/development/Go/projects&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/development/Go/projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\development\lime\searcher\cmd" />

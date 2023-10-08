@@ -31,6 +31,7 @@ func findInKeywords(str string) []Site {
 			fmt.Println(err)
 			continue
 		}
+		s.Rating = 1.2
 		result = append(result, s)
 	}
 
